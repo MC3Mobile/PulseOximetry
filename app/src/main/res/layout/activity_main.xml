@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical" >
-
-
 
 
     <TextView
@@ -19,14 +18,13 @@
         android:textSize="20dp" />
 
 
-    //-  TextView as placeholder (until Google API) //
-
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="24dp"
-        android:text="Graph" />
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/linechart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="25"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
 
 
     <LinearLayout
@@ -62,17 +60,13 @@
         android:textSize="20dp" />
 
 
-    <!--  TextView as placeholder (until Google API) -->
-
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="24dp"
-        android:text="Graph" />
-
-
-    <!--  Need to have a LinearLayout (horizontal) for the Running Average and the button next to it -->
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/linechart2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="25"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
 
 
     <LinearLayout
@@ -104,8 +98,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Connect" />
-
-
 
 
 </LinearLayout>
