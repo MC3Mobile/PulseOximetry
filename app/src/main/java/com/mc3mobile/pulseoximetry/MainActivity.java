@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.XAxis;
@@ -54,6 +55,13 @@ public class MainActivity extends AppCompatActivity {
 
         int[] data1 = {0,5,10,15,20,25,30,35,40,45}; // x and Y data values
         int[] data2 = {97,98,96,98,97,96,97,98,99,97}; //see above
+
+        // Trying to figure out how to find the average and display it on the activity_main.xml
+        //double sum = 0;
+        //for(int i=0; i < data2.length ; i++)
+            //sum = sum + data2[i];
+        //double average = sum / data2.length;
+        //System.out.println(average);
 
         List<Entry> entries = new ArrayList<>(); // container for x,y entries
 
