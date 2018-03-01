@@ -1,6 +1,7 @@
 package com.mc3mobile.pulseoximetry;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -16,6 +17,7 @@ import com.github.mikephil.charting.data.LineDataSet;
 //import com.github.mikephil.charting.utils.XLabels;
 //import com.github.mikephil.charting.utils.XLabels.XLabelPosition;
 
+import com.github.mikephil.charting.utils.ColorTemplate;
 import com.mc3mobile.pulseoximetry.R;
 
 import java.util.ArrayList;
@@ -23,7 +25,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    /* @Override
+    /*@Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -37,12 +39,12 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
-    } */
+    }*/
 
     private LineChart mChart;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
+   @Override
+   protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // To make full screen layout
         //getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
@@ -74,8 +76,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         LineDataSet dataSet = new LineDataSet(entries, "O2 Saturation"); // sets as a line, add entries to dataset
-        //dataSet.setColor(...);
-        //dataSet.setValueTextColor(...); // styling, ...
+        dataSet.setColor(Color.DKGRAY);
 
         LineData lineData = new LineData(dataSet); //setting data
         mChart.setData(lineData); //drawing the line
@@ -105,9 +106,8 @@ public class MainActivity extends AppCompatActivity {
             entries2.add(new Entry(data3[i], data4[i])); //defines fill
         }
 
-        LineDataSet dataSet2 = new LineDataSet(entries2, "Pulse Rate"); // sets as a line, add entries to dataset
-        //dataSet.setColor();
-        //dataSet.setValueTextColor(...); // styling, ...
+       LineDataSet dataSet2 = new LineDataSet(entries2, "Pulse Rate"); // sets as a line, add entries to dataset
+       dataSet2.setColor(Color.DKGRAY);
 
         LineData lineData2 = new LineData(dataSet2); //setting data
         mChart.setData(lineData2); //drawing the line
