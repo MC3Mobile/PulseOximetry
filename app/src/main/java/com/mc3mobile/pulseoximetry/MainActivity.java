@@ -57,11 +57,14 @@ public class MainActivity extends AppCompatActivity {
         int[] data2 = {97,98,96,98,97,96,97,98,99,97}; //see above
 
         // Trying to figure out how to find the average and display it on the activity_main.xml
-        //double sum = 0;
-        //for(int i=0; i < data2.length ; i++)
-            //sum = sum + data2[i];
-        //double average = sum / data2.length;
-        //System.out.println(average);
+
+        double sum = 0;
+        for(int i=0; i < data2.length ; i++)
+            sum = sum + data2[i];
+        TextView average = (TextView)findViewById(R.id.average);
+        double result = sum / data2.length;
+        average.setText("Running Average: " + result);
+
 
         List<Entry> entries = new ArrayList<>(); // container for x,y entries
 
@@ -87,6 +90,13 @@ public class MainActivity extends AppCompatActivity {
 
         int[] data3 = {0,5,10,15,20,25,30,35,40,45}; // x and Y data values
         int[] data4 = {61,62,63,61,63,62,61,63,63,61}; //see above
+
+        double sum2 = 0;
+        for(int i=0; i < data4.length ; i++)
+            sum2 = sum2 + data4[i];
+        TextView average2 = (TextView)findViewById(R.id.average2);
+        double result2 = sum2 / data4.length;
+        average2.setText("Running Average: " + result2);
 
        List<Entry> entries2 = new ArrayList<>(); // container for x,y entries
 
