@@ -3,7 +3,6 @@ package com.mc3mobile.pulseoximetry;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,9 +16,6 @@ import com.github.mikephil.charting.data.LineDataSet;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.TimeUnit;
 
 public class LineChartFragment extends Fragment {
 
@@ -59,7 +55,7 @@ public class LineChartFragment extends Fragment {
 
         YAxis yAxisLeft = lineChart.getAxisLeft(); //Get left instance of y axis
         yAxisLeft.setAxisMaximum(120); //Set max range
-        yAxisLeft.setAxisMinimum(80); //Set min range
+        yAxisLeft.setAxisMinimum(70); //Set min range
 
         ArrayList<Integer> time = getArguments().getIntegerArrayList(BUNDLE_TIME);
         ArrayList<Integer> hr = getArguments().getIntegerArrayList(BUNDLE_HR);
@@ -69,7 +65,7 @@ public class LineChartFragment extends Fragment {
 
         List<Entry> data = generateData(time, hr);
 
-        LineDataSet dataSet = new LineDataSet(data, "O2 Saturation");
+        LineDataSet dataSet = new LineDataSet(data, "Pulse Rate");
         dataSet.setColor(Color.RED); //Line color
 
 

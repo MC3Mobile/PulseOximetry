@@ -26,13 +26,6 @@
         android:layout_weight="1">
     </FrameLayout>
 
-    <com.github.mikephil.charting.charts.LineChart
-        android:id="@+id/linechart"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="25"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -58,15 +51,14 @@
         android:textStyle="bold"
         android:textSize="30dp" />
 
-
-
-        <com.github.mikephil.charting.charts.LineChart
-        android:id="@+id/linechart3"
+    <FrameLayout
+        android:id="@+id/chart_two_activity_fragment_container2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="25"
+        android:layout_height="200dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp" />
+        android:layout_marginRight="20dp"
+        android:layout_weight="1">
+    </FrameLayout>
 
 
     <LinearLayout
